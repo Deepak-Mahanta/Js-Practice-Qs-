@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- create a page with two images and a button. where the buutten is clicked, swap the source atribute of the image -->
+
+    <img id="one" style="width: 100px;" src="https://picsum.photos/200/300" alt="">
+    <img id="two" style="width: 100px;" src="https://images.unsplash.com/photo-1718465350900-096470ddbef7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+    <button>Swap images</button>
+
+    <script>
+        var one = document.querySelector("#one");
+        var two = document.querySelector("#two");
+        const btn = document.querySelector("button");
+        btn.addEventListener("click", function(){
+            var src1= one.src;
+            var src2= two.src;
+            one.src = src2;
+            two.src = src1;
+            // var temp = one.src;
+            // one.src = two.src;
+            // two.src = temp;
+        });
+    </script>
+
+</body>
+</html>
